@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:id="@+id/container"
+    tools:context="com.usict.minorproject.messengerapp.ChatActivity">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:weightSum="100"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/tableRow">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:hint="Type your message here"
+            android:id="@+id/message_EditText"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+             />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@android:drawable/sym_action_chat"
+            android:id="@+id/button_chat"
+            android:layout_weight="20" />
+    </TableRow>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/messagesContainer"
+        android:listSelector="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:transcriptMode="alwaysScroll"
+        android:layout_above="@+id/tableRow"
+        android:divider="@null" />
+
+
+</RelativeLayout>
